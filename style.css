@@ -235,7 +235,7 @@ p {
   visibility: hidden;
 }
 
-/* Tooltip arrow */
+/* Tooltip arrow
 .tooltip:after {
   content: "";
   position: absolute;
@@ -248,7 +248,7 @@ p {
   transition: opacity .6s;
   border-color: #062b45 transparent transparent transparent;
   visibility: hidden;
-}
+} */
 
 .tooltip:hover:before, .tooltip:hover:after {
   opacity: 1;
