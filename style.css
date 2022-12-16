@@ -297,7 +297,7 @@ p {
   }
   100% {
     top: 50%;
-    height: 100%;
+    height: 10%;
     padding: 0px 100%;
   }
 }
@@ -310,7 +310,7 @@ p {
   }
   100% {
     top: 50%;
-    height: 100%;
+    height: 10%;
     padding: 0px 100%;
   }
 }
@@ -488,7 +488,7 @@ p {
   body:before {
     width: 0px;
   }
-  @ -webkit-keyframes puff {
+  @-webkit-keyframes puff {
     0% {
       top: 100%;
       width: 0px;
@@ -535,7 +535,8 @@ p {
     display: block;
     float: none;
   }
-  @ -webkit-keyframes materia {
+
+  @-webkit-keyframes materia {
     0% {
       background: var(--BackgroundColor);
     }
@@ -544,7 +545,7 @@ p {
     }
     100% {
       width: 300px;
-      height: fit-content;
+      height: 550px;
       background: var(--BackgroundColor);
       -webkit-border-radius: 10px;
     }
@@ -558,7 +559,7 @@ p {
     }
     100% {
       width: 300px;
-      height: fit-content;
+      height: 550px;
       background: var(--BackgroundColor);
       border-radius: 10px;
     }
