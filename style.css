@@ -1,5 +1,20 @@
+:root {
+  --primaryColor: hsl(224, 48%, 16%); 
+  --TextColor: hsl(0, 0%, 100%);
+  --BtnTextColor: hsl(0, 0%, 100%);
+  --ascentColor: hsl(350, 79%, 59%);
+  --BackgroundColor: hsl(213, 73%, 22%);
+  --HoverAscentColor: hsl(350, 54%, 40%);
+  --Circle: hsl(350, 79%, 59%);
+  --UA: linear-gradient(hsl(207, 90%, 54%) 0%, hsl(207, 90%, 54%) 50%, hsl(45, 100%, 51%) 50%, hsl(45, 100%, 51%) 100%);
+  --PL: linear-gradient(hsl(0, 0%, 100%) 0%, hsl(0, 0%, 100%) 50%, hsl(0, 100%, 50%) 50%, hsl(0, 100%, 50%) 100%);;
+  --EN:center / cover no-repeat url(./united-kingdom-flag-icon.svg);
+  --Flag: var(--EN);
+  font-size: 62.5%;
+}
 
 html {
+  box-sizing:border-box;
   height: 100%;
 }
 
@@ -9,81 +24,67 @@ body {
   background: var(--primaryColor) ;
   background-size: cover;
   position: fixed;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   width: 100%;
   height: 100%;
-  font: normal 14px/1.618em "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
-}
-
-body:before {
-  content: "";
-  pointer-events: none;
-  height: 0px;
-  padding: 0px;
-  border: 130em solid var(--primaryColor);
-  position: absolute;
-  left: 50%;
-  top: 100%;
-  z-index: 2;
-  display: block;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -webkit-animation: puff 0.5s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.2s 2.3s linear forwards;
-  animation: puff 0.5s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.2s 2.3s linear forwards;
 }
 
 h1,
 h2 {
   font-weight: 500;
-  margin: 0px 0px 5px 0px;
+  margin: 0 0 0.5rem 0;
 }
 
 h1 {
-  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5rem;
+  font-size: 2.4rem;
 }
 
 h2 {
-  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 p {
-  margin: 0px;
+  font-size: 1.4rem;
+  margin: 0;
+
+}
+.show {
+  display: "";
+}
+.hide {
+  display: none;
 }
 
 .profile-card {
   background: var(--Circle);
-  width: 56px;
-  height: 56px;
+  width: 5.6rem;
+  height: 5.6rem;
   position: absolute;
   left: 50%;
   top: 50%;
   z-index: 2;
   overflow: hidden;
   opacity: 0;
-  margin-top: 70px;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+  -webkit-box-shadow: rem 3px 6px rgba(0, 0, 0, 0.16), rem 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: rem 3px 6px rgba(0, 0, 0, 0.16), rem 3px 6px rgba(0, 0, 0, 0.23);
   -webkit-animation: init 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, materia 0.5s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards;
   animation: init 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, materia 0.5s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .profile-card header {
-  width: 179px;
-  height: 280px;
-  padding: 40px 20px 30px 20px;
-  display: inline-block;
-  float: left;
-  border-right: 2px dashed var(--BackgroundColor);
   color: var(--TextColor);
-  margin-top: 50px;
+  margin-top: 5rem;
   opacity: 0;
   text-align: center;
   -webkit-animation: moveIn 1s 3.1s ease forwards;
@@ -98,24 +99,24 @@ p {
   display: inline-block;
   text-align: center;
   position: relative;
-  margin: 25px 30px;
+  margin: 2.5rem 3rem;
 }
 
 .profile-card header .link-a:after {
   position: absolute;
   content: "";
-  bottom: 3px;
-  right: 3px;
-  width: 20px;
-  height: 20px;
-  border: 4px solid var(--BackgroundColor);
+  bottom: 0.3rem;
+  right: 0.3rem;
+  width: 2rem;
+  height: 2rem;
+  border: 0.4rem solid var(--primaryColor);
   -webkit-transform: scale(0);
   transform: scale(0);
   background: var(--Flag);
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.1);
   -webkit-animation: scaleIn 0.3s 3.5s ease forwards;
   animation: scaleIn 0.3s 3.5s ease forwards;
 }
@@ -124,30 +125,29 @@ p {
 }
 
 .profile-card header a > img {
-  width: 120px;
+  width: 15rem;
   max-width: 100%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
   -webkit-transition: -webkit-box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease;
-  -webkit-box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.06);
-  box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0 0 0 0.8rem var(--primaryColor);
+  box-shadow: 0 0 0 0.8rem var(--primaryColor);
 }
 
 .profile-card header a:hover > img {
-  -webkit-box-shadow: 0px 0px 0px 12px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 0px 12px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 0 1.5rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 1.5rem rgba(0, 0, 0, 0.1);
 }
 
 .profile-card .profile-bio {
-  width: 175px;
-  height: 180px;
+  width: 17.5rem;
+  height: 18rem;
   display: inline-block;
   float: right;
-  padding: 50px 20px 30px 20px;
-  background: var(--BackgroundColor);
+  padding: 5rem 2rem 3rem 2rem;
   color: var(--TextColor);
-  margin-top: 50px;
+  margin-top: 5rem;
   text-align: center;
   opacity: 0;
   -webkit-animation: moveIn 1s 3.1s ease forwards;
@@ -155,14 +155,9 @@ p {
 }
 
 .profile-social-links {
-  width: 218px;
-  display: inline-block;
-  float: right;
-  margin: 0px;
-  padding: 15px 20px;
-  background: var(--BackgroundColor);
-  margin-top: 50px;
-  text-align: center;
+  padding: 1.5rem 2rem;
+  margin-top: 5rem;
+  text-align: end;
   opacity: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -172,8 +167,7 @@ p {
 
 .profile-social-links li {
   list-style: none;
-  margin: -5px 0px 0px 0px;
-  padding: 0px;
+  padding: 0;
   float: left;
   width: 25%;
   text-align: center;
@@ -182,9 +176,9 @@ p {
 .profile-social-links li a {
   display: inline-block;
   color: var(--ascentColor);
-  width: 24px;
-  height: 24px;
-  padding: 6px;
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0.6rem;
   position: relative;
   overflow: hidden!important;
   -webkit-border-radius: 50%;
@@ -196,15 +190,17 @@ p {
 
 .profile-social-links li a i {
   position: relative;
+  font-size: 1.8rem;
   z-index: 1;
 }
 
 .profile-social-links li a img,
 .profile-social-links li a svg {
-  width: 24px;
+  width: 4rem;
 }
 
 .cv-download {
+  display: none;
   margin: 0 !important;
   color: var(--ascentColor);
 }
@@ -213,78 +209,86 @@ p {
   color: var(--HoverAscentColor);
 }
 
+/* ********************************************** */
+/* ! Tooltip box */
+/* ********************************************** */
 .tooltip {
   position: relative;
 }
 
-/* Tooltip box */
 .tooltip:before {
   content: attr(data-tooltip); 
   position: absolute;
-  width: 80px;
+  width: 8rem;
   background-color: var(--TextColor);
   color: var(--ascentColor);
   text-align: center;
-  padding: 5px;
+  padding: 0.5rem;
   line-height: 1.2;
-  border-radius: 6px;
+  border-radius: 0.6rem;
   z-index: 1;
   opacity: 0;
   transition: opacity .6s;
   bottom: 125%;
   left: 100%;
-  margin-left: -60px;
-  font-size: 0.4em;
+  margin-left: -6rem;
   visibility: hidden;
+  font-size: 1rem;
 }
-
-/* Tooltip arrow
-.tooltip:after {
-  content: "";
-  position: absolute;
-  bottom: 75%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  opacity: 0;
-  transition: opacity .6s;
-  border-color: #062b45 transparent transparent transparent;
-  visibility: hidden;
-} */
 
 .tooltip:hover:before, .tooltip:hover:after {
   opacity: 1;
   visibility: visible;
 }
 
-.settings {
+/* ********************************************** */
+/* ! Top buttons  */
+/* ********************************************** */
+#settings-menu {
   position: absolute;
-  z-index: 3;
+  z-index: 999;
+}
+
+.nav-container  {
+  display: flex;
+  width: 100vw;
+    justify-content: space-evenly;
+    margin: 1rem;
+}
+
+.btn {
+  color: var(--BtnTextColor);
+  opacity: 50%;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  top: 1rem;
+  left: 1rem;
+
 }
 
 @-webkit-keyframes init {
   0% {
-    width: 0px;
-    height: 0px;
+    width: 0;
+    height: 0;
   }
   100% {
-    width: 56px;
-    height: 56px;
-    margin-top: 0px;
+    width: 5.6rem;
+    height: 5.6rem;
+    margin-top: o;
     opacity: 1;
   }
 }
 
 @keyframes init {
   0% {
-    width: 0px;
-    height: 0px;
+    width: 0;
+    height: 0;
   }
   100% {
-    width: 56px;
-    height: 56px;
-    margin-top: 0px;
+    width: 5.6rem;
+    height: 5.6rem;
+    margin-top: o;
     opacity: 1;
   }
 }
@@ -292,26 +296,26 @@ p {
 @-webkit-keyframes puff {
   0% {
     top: 100%;
-    height: 0px;
-    padding: 0px;
+    height: 0;
+    padding: 0;
   }
   100% {
     top: 50%;
-    height: 10%;
-    padding: 0px 100%;
+    height: 100%;
+    padding: 0 100%;
   }
 }
 
 @keyframes puff {
   0% {
     top: 100%;
-    height: 0px;
-    padding: 0px;
+    height: 0;
+    padding: 0;
   }
   100% {
     top: 50%;
-    height: 10%;
-    padding: 0px 100%;
+    height: 100%;
+    padding: 0 100%;
   }
 }
 
@@ -320,7 +324,7 @@ p {
     -webkit-border-radius: 50%;
   }
   100% {
-    -webkit-border-radius: 0px;
+    -webkit-border-radius: 0;
   }
 }
 
@@ -329,7 +333,7 @@ p {
     -webkit-border-radius: 50%;
   }
   100% {
-    border-radius: 0px;
+    border-radius: 0;
   }
 }
 
@@ -390,13 +394,13 @@ p {
     background: var(--BackgroundColor);
   }
   50% {
-    -webkit-border-radius: 4px;
+    -webkit-border-radius: 0.4rem;
   }
   100% {
-    width: 500px;
+    width: 50rem;
     height: fit-content;
     background: var(--BackgroundColor);
-    -webkit-border-radius: 4px;
+    -webkit-border-radius: 0.4rem;
   }
 }
 
@@ -405,35 +409,35 @@ p {
     background: var(--BackgroundColor);
   }
   50% {
-    border-radius: 4px;
+    border-radius: 0.4rem;
   }
   100% {
-    width: 500px;
+    width: 50rem;
     height: fit-content;
     background: var(--BackgroundColor);
-    border-radius: 4px;
+    border-radius: 0.4rem;
   }
 }
 
 @-webkit-keyframes moveIn {
   0% {
-    margin-top: 50px;
+    margin-top: 5rem;
     opacity: 0;
   }
   100% {
     opacity: 1;
-    margin-top: -20px;
+    margin-top: -2rem;
   }
 }
 
 @keyframes moveIn {
   0% {
-    margin-top: 50px;
+    margin-top: 5rem;
     opacity: 0;
   }
   100% {
     opacity: 1;
-    margin-top: -20px;
+    margin-top: -2rem;
   }
 }
 
@@ -486,13 +490,13 @@ p {
     background-size: cover;
   }
   body:before {
-    width: 0px;
+    width: 0;
   }
   @-webkit-keyframes puff {
     0% {
       top: 100%;
-      width: 0px;
-      padding-bottom: 0px;
+      width: 0;
+      padding-bottom: 0;
     }
     100% {
       top: 50%;
@@ -503,8 +507,8 @@ p {
   @keyframes puff {
     0% {
       top: 100%;
-      width: 0px;
-      padding-bottom: 0px;
+      width: 0;
+      padding-bottom: 0;
     }
     100% {
       top: 50%;
@@ -518,7 +522,7 @@ p {
   .profile-card header {
     width: auto;
     height: auto;
-    padding: 30px 20px;
+    padding: 3rem 2rem;
     display: block;
     float: none;
     border-right: none;
@@ -526,7 +530,7 @@ p {
   .profile-card .profile-bio {
     width: auto;
     height: auto;
-    padding: 15px 20px 30px 20px;
+    padding: 1.5rem 2rem 3rem 2rem;
     display: block;
     float: none;
   }
@@ -541,13 +545,13 @@ p {
       background: var(--BackgroundColor);
     }
     50% {
-      -webkit-border-radius: 10px;
+      -webkit-border-radius: 1rem;
     }
     100% {
-      width: 300px;
-      height: 550px;
+      width: 30rem;
+      height: 55rem;
       background: var(--BackgroundColor);
-      -webkit-border-radius: 10px;
+      -webkit-border-radius: 1rem;
     }
   }
   @keyframes materia {
@@ -555,34 +559,19 @@ p {
       background: var(--BackgroundColor);
     }
     50% {
-      border-radius: 10px;
+      -webkit-border-radius: 1rem;
     }
     100% {
-      width: 300px;
-      height: 550px;
+      width: 30rem;
+      height: 55rem;
       background: var(--BackgroundColor);
-      border-radius: 10px;
+      -webkit-border-radius: 1rem;
     }
   }
 }
 
-#settings-menu {
-  position: absolute;
-  z-index: 999;
-}
-
-.nav-container  {
-  display: flex;
-  width: 100vw;
-    justify-content: space-evenly;
-    margin: 1rem;
-}
-
-.btn {
-  color: var(--BtnTextColor);
-  background: none;
-  border: none;
-  top: 1rem;
-  left: 1rem;
-
+@media screen and (min-width: 144rem) {
+  :root {
+    font-size: 100%;
+  }
 }
