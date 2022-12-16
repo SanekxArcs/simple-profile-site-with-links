@@ -10,30 +10,56 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+    <style>
+        :root {
+            --primaryColor: #16213E; 
+            --TextColor: #ffffff;
+            --BtnTextColor: #fff;
+            --ascentColor: #E94560;
+            --BackgroundColor: #0F3460;
+                --HoverAscentColor: #9c2e40;
+            --Circle: #E94560;
+            --UA: linear-gradient(#2196F3 0%, #2196F3 50%, #FFC107 50%, #FFC107 100%);
+            --PL: linear-gradient(white 0%, white 50%, red 50%, red 100%);;
+            --EN:center / cover no-repeat url(./united-kingdom-flag-icon.svg);
+            --Flag: var(--EN);
+        }
+        </style>
     
 </head>
 <body>
-    <aside class="profile-card">
+        <nav id="settings-menu">
+            <div class="nav-container">
+                <button class="tdlang button_lang btn current_lang" id="en">EN</button>
+                <button class="tdlang button_lang btn" id="pl">PL</button>
+                <button class="tdlang button_lang btn" id="ua">UA</button>
+                <button class="theme btn">Go Light Theme</button>
+            </div>
+                
+            
+        </nav>
+
+    <aside id="content" class="profile-card">
+            <div class="menu-trigger"></div>
         <header>
             <a target="_blank" href="mailto: oleksandr.dzisiak@gmail.com" class="link-a">
                 <img src="https://media.licdn.com/dms/image/D4D35AQHx2zZ0YD3hhw/profile-framedphoto-shrink_400_400/0/1669812339341?e=1671645600&v=beta&t=tPN654rrH1yabfwXXUJ5WB5TAheRUinKlh3rcOGf1JM" class="hoverZoomLink" alt="Click on the profile photo to send Mail to me.">
             </a>
             <h1>
-                <a target="_blank" href="CV_Oleksandr_Dzisiak_EN.pdf" download="" class="cv-download tooltip" data-tooltip="Click to download my CV">
+                <a target="_blank" href="https://drive.google.com/drive/folders/1ctW7_YwPB9c_OeuDlbwVxEyMocJ1X6sx?usp=sharing" class="cv-download tooltip" data-tooltip="Click to download my CV">
                     <i class="bi bi-file-earmark-person-fill"></i>
                 </a>
-                Oleksandr Dzisiak
+                <span class=" translation english" id="translate-name">Oleksandr Dzisiak</span> 
             </h1>
             <h2>
-                Front-end Developer
-                
+                <span class="translation english" id="translate-work">Front-end Developer</span>
             </h2>
         </header>
 
         <div class="profile-bio">
-            <p>
-                Hi, I'm a web developer from Warsaw, PL. Currently working on freelance projects. In my spare time I enjoy DIY, gaming and building my own projects. My preferred tools are vanilla JS, React and HTML/CSS. Good at communicating with clients.
-            </p>        
+            <p class="translation english" id="translate">Hi, I'm a web developer from Warsaw, PL. Currently working on freelance projects. In my spare time I enjoy DIY, gaming and building my own projects. My preferred tools are vanilla JS, React and HTML/CSS. Good at communicating with clients.
+            </p> 
         </div>
 
         <ul class="profile-social-links">
@@ -79,6 +105,8 @@
                 </a>
             </li>
         </ul>
+                  
+                
       </aside>
 </body>
 </html>
