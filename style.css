@@ -23,8 +23,8 @@ body {
   overflow: hidden;
   background: var(--primaryColor) ;
   background-image: url(./bg_jobseeker_md.png);
-  background-repeat: repeat;
-  background-size: 336px 384px ;
+  background-repeat: repeat !important;
+  background-size: 250 250 ;
   /* background-size: cover; */
   position: fixed;
   padding: 0;
