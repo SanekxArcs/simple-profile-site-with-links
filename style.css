@@ -22,7 +22,10 @@ body {
   position: relative;
   overflow: hidden;
   background: var(--primaryColor) ;
-  background-size: cover;
+  background-image: url(./bg_jobseeker_md.png);
+  background-repeat: repeat;
+  background-size: 336px 384px ;
+  /* background-size: cover; */
   position: fixed;
   padding: 0;
   margin: 0;
