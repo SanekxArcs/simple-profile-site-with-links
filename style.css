@@ -490,7 +490,7 @@ p {
 
 @media screen and (min-aspect-ratio: 4/3) {
   body {
-    background-size: cover;
+    /* background-size: cover; */
   }
   body:before {
     width: 0;
